@@ -3,8 +3,21 @@ player:
   blocklagging: true
   glitchytools: true
   phantomdamage: true
+  screeneffects: true
 
 settings:
   fake_nick_chance: 0.05
+  fake_nick_cooldown: 30
+
   phantom_damage_chance: 0.02
+  phantom_damage_cooldown: 15
+
   tool_fail_chance: 0.1
+  tool_fail_cooldown: 10
+
+  screeneffect_chance: 0.01
+  screeneffect_cooldown: 20
+
+  blocklag_chance: 0.2       # шанс фантомного лага блока (20%)
+  blocklag_cooldown: 15      # кулдаун (сек) для игрока
+
