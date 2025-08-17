@@ -1,0 +1,10 @@
+player:
+  fakenicknames: true
+  blocklagging: true
+  glitchytools: true
+  phantomdamage: true
+
+settings:
+  fake_nick_chance: 0.05
+  phantom_damage_chance: 0.02
+  tool_fail_chance: 0.1
