@@ -1,18 +1,65 @@
-name: GlitchcorePlugin
-version: '1.0-RELEASE'
+name: Glitchcore
+version: 1.0.0
 main: com.tapocheck103.glitchcorePlugin.GlitchcorePlugin
-api-version: '1.21'
+api-version: 1.21
+author: tapocheck103
+description: Плагин для создания аномалий и "глючных" эффектов на сервере
+
 commands:
-  glitch:
-    description: Управление аномалиями Glitchcore
-    usage: /glitch <fakenick|blocklag|toolfail|phantomdamage|screeneffect|random|reload>
-    aliases: [gl]
+  glitchcore:
+    description: Управление аномалиями вручную
+    usage: /glitchcore <аномалия> [...]
+    aliases: [glitch, gc]
     permission: glitchcore.use
+    permission-message: "§cУ вас нет прав использовать эту команду!"
+
 permissions:
-  glitchcore.use:
-    description: Доступ к команде /glitch
+  glitchcore.*:
+    description: Доступ ко всем аномалиям и функциям Glitchcore
     default: op
-  glitchcore.reload:
-    description: Перезагрузка конфига
+    children:
+      glitchcore.use: true
+      glitchcore.fakenick: true
+      glitchcore.fakechat: true
+      glitchcore.compass: true
+      glitchcore.phantomdamage: true
+      glitchcore.torchfade: true
+      glitchcore.teleport: true
+      glitchcore.sound: true
+      glitchcore.particles: true
+
+  glitchcore.use:
+    description: Доступ к команде /glitchcore
     default: op
 
+  glitchcore.fakenick:
+    description: Использование аномалии FakeNick
+    default: op
+
+  glitchcore.fakechat:
+    description: Использование аномалии FakeChat
+    default: op
+
+  glitchcore.compass:
+    description: Использование аномалии CompassGlitch
+    default: op
+
+  glitchcore.phantomdamage:
+    description: Использование аномалии PhantomDamage
+    default: op
+
+  glitchcore.torchfade:
+    description: Использование аномалии TorchFade
+    default: op
+
+  glitchcore.teleport:
+    description: Использование аномалии RandomTeleport
+    default: op
+
+  glitchcore.sound:
+    description: Использование аномалии SoundGlitch
+    default: op
+
+  glitchcore.particles:
+    description: Использование аномалии ParticleGlitch
+    default: op
